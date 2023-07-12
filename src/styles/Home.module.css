@@ -1,0 +1,696 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: rgb(32,32,32);
+  display: flex;
+  flex-direction: row;
+
+  --should-borders-show: none;
+  --border-accent-color: rgb(37, 37, 37);
+  --box-bg-color: rgb(40,40,40);
+  --icon-bg-color: rgb(26, 26, 26);
+}
+
+.main .leftSide {
+  width: 50%;
+  height: 100%;
+  background: url('/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.main .leftSide .leftSideOpacityShader {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main .rightSide {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.rightSide::-webkit-scrollbar {
+  width: 0px;
+}
+
+.rightSide::-webkit-scrollbar-thumb {
+  border-radius: 40px;
+  background-color: var(--box-bg-color);
+  box-shadow: 0px 0px 10px -3px rgba(0,0,0, 0.6);
+}
+
+.rightSide header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+
+.rightSide header h2 {
+  margin-left: auto;
+}
+
+.generalInfoContainer {
+  width: 100%;
+  height: 160px;
+  padding: 0px 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.generalInfoContainer .generalInfoTemplate {
+  width: 250px;
+  height: 100%;
+  background-color: var(--box-bg-color);
+  border-radius: 20px;
+  position: relative;
+  border: var(--should-borders-show);
+  box-shadow: 0px 0px 10px -3px rgba(0,0,0, 0.6);
+}
+
+.generalInfoContainer .generalInfoTemplate .generalInfoTemplateIconContainer {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.generalInfoContainer .generalInfoTemplate .generalInfoTemplateIconContainer p {
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.generalInfoContainer .generalInfoTemplate .generalInfoTemplateIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--icon-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--should-borders-show);
+}
+
+.generalInfoTemplateIcon img {
+  width: 25px;
+  height: 25px;
+  margin-right: 1px;
+}
+
+.generalInfoTemplate .generalInfoTemplateText {
+  width: 60%;
+  height: 50%;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.serverListContainer {
+  width: 100%;
+  height: 400px;
+  padding: 0px 20px;
+  margin-top: 50px;
+}
+
+.serverListContainer .serverItemTemplate {
+  width: 100%;
+  height: 80px;
+  background-color: var(--box-bg-color);
+  box-shadow: 0px 0px 10px -3px rgba(0,0,0, 0.6);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0px;
+  border: var(--should-borders-show);
+  position: relative;
+}
+
+.serverItemTemplate .serverItemTemplateText {
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  left: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.serverItemTemplateText .serverItemServerBadgeHolder {
+  width: 300px;
+  height: 100%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.serverItemServerBadgeHolder .badge {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(26, 26, 26);
+  margin-right: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge img {
+  width: 60%;
+  height: auto;
+}
+
+.serverItemTemplateText .serverItemServerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.serverItemTemplateText .serverItemServerInfo p {
+  font-weight: 600;
+}
+
+.serverItemTemplateText .serverItemServerPlayers {
+  margin-left: 60px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.serverItemTemplate .serverItemTemplateIcon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--icon-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--should-borders-show);
+}
+
+.serverItemTemplateIcon img {
+  width: 25px;
+  height: 25px;
+  margin-right: 1px;
+}
+
+.serverListContainer .serverItemTemplate .serverItemLeft {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.serverItemLeft .serverItemLeftName {
+  width: 30%;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px; 
+  box-sizing: border-box;
+}
+
+.serverItemLeft .serverItemLeftName h3 {
+  font-size: 20px;
+}
+
+.serverItemLeft .serverItemLeftName h4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.serverItemLeft .serverItemLeftInfo {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.serverListContainer .serverItemTemplate .serverItemRight {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.serverItemRight img {
+  width: 60px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.rightSide footer {
+  width: 100%;
+  height: 100px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 1700px) {
+  .main .leftSide {
+    width: 40%;
+  }
+  .main .rightSide {
+    width: 60%;
+    max-width: 900px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .main .leftSide {
+    width: 30%;
+  }
+  .main .rightSide {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main .leftSide {
+    display: none;
+  }
+  .main .rightSide {
+    width: 100%;
+    max-width: 900px;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .generalInfoTemplate {
+    width: 220px !important;
+  }
+
+  .generalInfoTemplateIcon {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .generalInfoTemplateIcon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .generalInfoTemplateText {
+    font-size: 32px !important;
+  }
+
+  .generalInfoTemplateIconContainer p {
+    font-size: 14px;
+  }
+
+  .serverItemTemplate p {
+    font-size: 14px !important;
+  }
+
+  .serverItemTemplateIcon {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .serverItemTemplateIcon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .badge {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .generalInfoTemplate {
+    width: 180px !important;
+  }
+
+  .serverItemTemplateText {
+    left: 80px !important;
+  }
+
+  .serverItemServerPlayers {
+    margin-left: 15px !important;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .rightSide header img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .rightSide header h2 {
+    font-size: 18px;
+  }
+
+  .generalInfoContainer {
+    height: 140px;
+  }
+
+  .generalInfoTemplate {
+    width: 150px !important;
+  }
+
+  .generalInfoTemplateText {
+    top: 15px !important;
+    font-size: 28px !important;
+  }
+
+  .generalInfoTemplateIconContainer {
+    height: 40% !important;
+    padding-bottom: 10px !important;
+  }
+
+  .generalInfoTemplateIconContainer p {
+    font-size: 12px;
+  }
+
+  .generalInfoTemplateIcon {
+    height: 30px !important;
+  }
+
+  .generalInfoTemplateIcon img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .serverItemTemplate {
+    height: 70px !important;
+  }
+
+  .serverItemTemplateIcon {
+    height: 35px !important;
+    width: 35px !important;
+  }
+
+  .serverItemTemplateIcon img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .serverItemTemplateText {
+    left: 70px !important;
+  }
+
+  .serverItemTemplateText .serverItemServerBadgeHolder {
+    padding: 0px 10px;
+  }
+
+  .serverItemServerInfo{
+    min-width: 120px !important;
+  }
+
+  .serverItemServerInfo p {
+    font-size: 12px !important;
+  }
+
+  .serverItemServerPlayers {
+    margin-left: 30px !important;
+    min-width: 90px;
+  }
+
+  .serverItemServerPlayers p {
+    font-size: 12px !important;
+  }
+
+  .badge {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .rightSide footer p {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .rightSide {
+    padding: 5px !important;
+  }
+
+  .rightSide header {
+    height: 120px;
+  }
+
+  .generalInfoTemplate {
+    width: 100vw !important;
+  }
+
+  .rightSide header img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .rightSide header h2 {
+    font-size: 16px;
+  }
+
+  .generalInfoContainer {
+    height: 130px;
+  }
+
+  .generalInfoTemplate {
+    width: 130px !important;
+  }
+
+  .generalInfoTemplateText {
+    top: 15px !important;
+    font-size: 24px !important;
+  }
+
+  .generalInfoTemplateIconContainer {
+    height: 40% !important;
+    padding-bottom: 10px !important;
+  }
+
+  .generalInfoTemplateIconContainer p {
+    font-size: 10px;
+  }
+
+  .generalInfoTemplateIcon {
+    height: 25px !important;
+    width: 30px !important;
+  }
+
+  .generalInfoTemplateIcon img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .serverItemTemplate {
+    height: 60px !important;
+  }
+
+  .serverItemTemplateIcon {
+    height: 30px !important;
+    width: 30px !important;
+  }
+
+  .serverItemTemplateIcon img {
+    height: 12px;
+    width: 12px;
+  }
+
+  .serverItemTemplateText {
+    left: 60px !important;
+  }
+
+  .serverItemTemplateText .serverItemServerBadgeHolder {
+    padding: 0px 5px;
+  }
+
+  .serverItemServerInfo{
+    min-width: 100px !important;
+  }
+
+  .serverItemServerInfo p {
+    font-size: 10px !important;
+  }
+
+  .serverItemServerPlayers {
+    margin-left: 20px !important;
+    min-width: 70px;
+  }
+
+  .serverItemServerPlayers p {
+    font-size: 10px !important;
+  }
+
+  .badge {
+    width: 30px !important;
+    height: 30px !important;
+    margin-right: 15px !important;
+  }
+
+  .rightSide footer {
+    margin: 10px 0px;
+  }
+
+  .rightSide footer p {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .serverItemTemplateText .serverItemServerBadgeHolder {
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .rightSide {
+    padding: 0px !important;
+  }
+
+  .rightSide header {
+    height: 120px;
+  }
+
+  .generalInfoTemplate {
+    width: 100vw !important;
+  }
+
+  .rightSide header img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .rightSide header h2 {
+    font-size: 14px;
+  }
+
+  .generalInfoContainer {
+    height: 110px;
+  }
+
+  .generalInfoTemplate {
+    width: 110px !important;
+  }
+
+  .generalInfoTemplateText {
+    top: 15px !important;
+    font-size: 20px !important;
+  }
+
+  .generalInfoTemplateIconContainer {
+    height: 40% !important;
+    padding-bottom: 5px !important;
+  }
+
+  .generalInfoTemplateIconContainer p {
+    font-size: 8px;
+  }
+
+  .generalInfoTemplateIcon {
+    height: 25px !important;
+    width: 30px !important;
+  }
+
+  .generalInfoTemplateIcon img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .serverItemTemplate {
+    height: 60px !important;
+  }
+
+  .serverItemTemplateIcon {
+    height: 30px !important;
+    width: 30px !important;
+  }
+
+  .serverItemTemplateIcon img {
+    height: 12px;
+    width: 12px;
+  }
+
+  .serverItemTemplateText {
+    left: 60px !important;
+  }
+
+  .serverItemTemplateText .serverItemServerBadgeHolder {
+    padding: 0px 15px;
+  }
+
+  .serverItemServerInfo{
+    min-width: 100px !important;
+  }
+
+  .serverItemServerInfo p {
+    font-size: 10px !important;
+  }
+
+  .serverItemServerPlayers {
+    margin-left: 20px !important;
+    min-width: 70px;
+  }
+
+  .serverItemServerPlayers p {
+    font-size: 10px !important;
+  }
+
+  .badge {
+    width: 30px !important;
+    height: 30px !important;
+    margin-right: 15px !important;
+  }
+
+  .rightSide footer {
+    margin: 10px 0px;
+  }
+
+  .rightSide footer p {
+    font-size: 12px !important;
+  }
+}
